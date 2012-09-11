@@ -19,7 +19,7 @@
 	<batch:job id="simpleJob">
 		<batch:step id="step1">
 			<batch:tasklet>
-				<batch:chunk reader="itemPersonReader" writer="itemPersonWriter"
+				<batch:chunk reader="itemPersonReader" processor="itemPersonProcessor" writer="itemPersonWriter"
 					commit-interval="1000" />
 			</batch:tasklet>
 		</batch:step>
@@ -63,6 +63,8 @@
 			</bean>
 		</property>
 	</bean>
+	
+	<bean id="itemPersonProcessor" class="org.redhat.sample.item.processor.PersonProcessor"/>
 
 	<bean id="itemPersonWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
 		<property name="resource" value="file:/tmp/dwp/Person-output.csv" />
