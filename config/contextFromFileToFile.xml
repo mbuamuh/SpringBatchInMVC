@@ -44,7 +44,7 @@
 	<bean name="itemPersonReader" id="itemPersonReader"
 		class="org.springframework.batch.item.file.FlatFileItemReader">
 		<property name="resource"
-			value="classpath:Input.txt" />
+			value="file:/tmp/dwp/input/Input.txt" />
 
 		<property name="lineMapper">
 			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
@@ -65,7 +65,7 @@
 	</bean>
 
 	<bean id="itemPersonWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
-		<property name="resource" value="file:/tmp/Person-output.txt" />
+		<property name="resource" value="file:/tmp/dwp/Person-output.csv" />
 		<property name="lineAggregator">
 			<bean
 				class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
