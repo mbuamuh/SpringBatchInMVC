@@ -40,11 +40,11 @@
 	</bean>
 	
 	<bean name="personMapper" id="personMapper" class="org.redhat.sample.PersonMapper"></bean>
-
+	
 	<bean name="itemPersonReader" id="itemPersonReader"
 		class="org.springframework.batch.item.file.FlatFileItemReader">
 		<property name="resource"
-			value="file:/tmp/dwp/input/Input.txt" />
+			value="file:/${ext.input.dir}/${ext.input.filename}" />
 
 		<property name="lineMapper">
 			<bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
@@ -67,7 +67,7 @@
 	<bean id="itemPersonProcessor" class="org.redhat.sample.item.processor.PersonProcessor"/>
 
 	<bean id="itemPersonWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
-		<property name="resource" value="file:/tmp/dwp/Person-output.csv" />
+		<property name="resource" value="file:/${ext.output.dir}/${ext.output.filename}" />
 		<property name="lineAggregator">
 			<bean
 				class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">

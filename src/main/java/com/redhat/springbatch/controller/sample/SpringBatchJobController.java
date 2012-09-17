@@ -10,7 +10,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
-
 public class SpringBatchJobController extends AbstractController{
 
 	protected ModelAndView handleRequestInternal(HttpServletRequest request,
