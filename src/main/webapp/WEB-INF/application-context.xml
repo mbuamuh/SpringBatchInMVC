@@ -12,19 +12,11 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
 		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-	<!-- Security constraints on the web application. Configure the authenticationFilter 
-		bean referenced in web.xml. Thus only users with their relevant roles and 
-		password defined in the users.properties file can access the web application -->
-
-	<!--  <bean id="authenticationFilter"
-		class="org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
-		<property name="authenticationManager" ref="batchAuthenticationManager"></property>
-	</bean> -->
-
 	<security:http auto-config="true">
 		<security:intercept-url pattern="/**" access="ROLE_ADMIN" />
 	</security:http>
 
+<!-- TODO: encrypt password using org.springframework.security.crypto.password.StandardPasswordEncoder -->
 	<security:authentication-manager>
 		<security:authentication-provider>
 			<!-- <security:password-encoder hash="sha">
