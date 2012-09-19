@@ -11,20 +11,22 @@
 		<!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
 			<version>3.8.1</version> <scope>test</scope> </dependency> -->
 
-		<!-- Spring framework -->
+		<!-- Spring framework <dependency> <groupId>org.springframework</groupId> 
+			<artifactId>spring</artifactId> <version>2.5.6</version> </dependency> -->
+
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring</artifactId>
-			<version>2.5.6</version>
+			<artifactId>spring-core</artifactId>
+			<version>3.1.2.RELEASE</version>
 		</dependency>
-		
+
 		<!-- Spring batch infrastructure -->
 		<dependency>
 			<groupId>org.springframework.batch</groupId>
 			<artifactId>spring-batch-infrastructure</artifactId>
 			<version>2.1.9.RELEASE</version>
 		</dependency>
-		
+
 		<!-- Spring batch core: contains spring-batch-2.1.xsd -->
 		<dependency>
 			<groupId>org.springframework.batch</groupId>
@@ -36,7 +38,51 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>2.5.6</version>
+			<version>3.1.2.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>3.1.2.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>3.1.2.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>3.1.2.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>3.1.2.RELEASE</version>
+		</dependency>
+
+		<!-- Spring security core library <dependency> <groupId>org.springframework.security</groupId> 
+			<artifactId>spring-security-core</artifactId> <version>3.1.2.RELEASE</version> 
+			<scope>compile</scope> </dependency> -->
+
+		<!-- Spring security config library with security XSDs -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>3.1.2.RELEASE</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Spring web security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>3.1.2.RELEASE</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- JSTL -->
